@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/">Add more Pokemon to your Pokedex!</a> {{#pokemon}}
+    <h1>Update your Pokemon</h1>
+    <form action='/pokemon/{{_id}}' method="POST" class="forms">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="type" placeholder="type: grass, water, electric or fire">
+        <input type="text" name="gender" placeholder="male or female">
+        <input type="text " name="size " placeholder="size">
+        <input type="number " name="health " placeholder="health">
+        <label for="owner"></label>
+        <input type="text " name="owner.name.firstName" placeholder="owners first name">
+        <input type=" text " name="owner.name.lastName" placeholder="owners last name">
+        <input type=" text " name="owner.age " placeholder="owners age">
+        <input type="text" name="owner.gender" placeholder="male or female">
+        <input type="submit">
+    </form>
+    <div class="pokemon">
+
+        <div>Pokemon name: {{name}}</div>
+        <div>Pokemon type:{{type}}</div>
+        <div> Pokemon Gender: {{gender}}</div>
+        <div> Pokemon size: {{size}}</div>
+        <div> Pokemon health: {{health}}</div>
+        <div> Owners name, lastname: {{owner.name.firstName}}{{owner.name.lastName}}</div>
+        <div>Owners age: {{owner.age}}</div>
+        <div>Owners gender: {{owner.gender}}</div>
+    </div>
+
+</body>
+
+</html>

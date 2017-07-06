@@ -1,0 +1,15 @@
+body {
+    background-color: yellow;
+    text-align: center;
+}
+
+.forms {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    max-width: 30rem;
+}
+
+.pokemon {
+    border: 1px black solid;
+}
